@@ -35,7 +35,11 @@
     <string notr="true">background-color:#29282f;
 border-radius:10px;
 font-family:Segoe-UI;
-</string>
+
+QDialog{
+border-color:#fff;
+border-width:20px;
+}</string>
    </property>
    <widget class="QLabel" name="label">
     <property name="geometry">
@@ -202,8 +206,63 @@ background-color:#dadada;
      <string>Submit</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>10</y>
+      <width>41</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border-image: url(:/icons/exit);
+    background-repeat: no-repeat;
+}
+
+QPushButton:hover
+{
+    border-image: url(:icons/exit_clicked.png);
+    background-repeat: no-repeat;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>icons/exit.png</normaloff>icons/exit.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+   </widget>
   </widget>
  </widget>
- <resources/>
- <connections/>
+ <resources>
+  <include location="../../OneDrive/Pulpit/exit.qrc"/>
+  <include location="exit.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>277</x>
+     <y>81</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>290</x>
+     <y>290</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

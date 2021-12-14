@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DiffPass</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>900</width>
+      <height>600</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+background-color: rgb(230, 226, 236);
+font-family:Segoe-UI;
+</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>315</x>
+       <y>140</y>
+       <width>270</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 42px;
+color: 29282f;
+font-weight: bold;</string>
+     </property>
+     <property name="text">
+      <string>DiffPass v2</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>200</y>
+       <width>500</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::RightToLeft</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 30px;
+color: #29282f</string>
+     </property>
+     <property name="text">
+      <string>Sing in or create a new account</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="login">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>310</y>
+       <width>240</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#login{
+background-color:#29282f;
+border-radius:10px;
+font-size: 18px;
+color:#fff;
+}
+
+QPushButton#login:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color:#595968;
+background-position:calc(100%-10px)center;
+}
+
+QPushButton#login:hover{
+background-color:#595968;
+}
+
+</string>
+     </property>
+     <property name="text">
+      <string>Log In</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="signup">
+     <property name="geometry">
+      <rect>
+       <x>330</x>
+       <y>410</y>
+       <width>240</width>
+       <height>40</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton#signup{
+background-color:#29282f;
+color:#fff;
+border-radius:10px;
+font-size: 18px;
+}
+
+QPushButton#signup:pressed{
+padding-left:5px;
+padding-top:5px;
+background-color:#5959681;
+background-position:calc(100%-10px)center;
+}
+
+QPushButton#signup:hover{
+background-color:#595968;
+}</string>
+     </property>
+     <property name="text">
+      <string>Create a new account</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
