@@ -2,7 +2,7 @@
 ## Menadżer haseł
 
 ### Założenia:
-- rozbudowane menu
+- bezpośrednie usuwanie danych z bazy(za pomocą wybrania wiersza i kliknięcia usuń)
 - nowy design
 - szyfrowanie haseł
 - 2 składnikowe hasło główne(masterkey)
