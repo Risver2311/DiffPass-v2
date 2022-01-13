@@ -5,6 +5,6 @@
 - bezpośrednie usuwanie danych z bazy(za pomocą wybrania wiersza i kliknięcia usuń)
 - spójny graficzny interface
 - szyfrowanie haseł
-- jeden login i główne hasło do dostępu do swoich danych
-- przypominanie hasła głównego
-- dostęp do zapamiętanych haseł z poziomu przeglądarki
+- panel użytkownika
+- możliwość zresetowania hasła głównego
+- aplikacja internetowa(dostęp do zapamiętanych haseł)
