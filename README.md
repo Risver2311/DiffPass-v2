@@ -6,5 +6,5 @@
 - spójny graficzny interface
 - szyfrowanie haseł
 - panel użytkownika
-- możliwość zresetowania hasła głównego
+- możliwość zmiany hasła
 - aplikacja internetowa(dostęp do zapamiętanych haseł)
