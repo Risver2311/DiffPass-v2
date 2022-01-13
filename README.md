@@ -3,7 +3,7 @@
 
 ### Założenia:
 - bezpośrednie usuwanie danych z bazy(za pomocą wybrania wiersza i kliknięcia usuń)
-- spójny graficzny interface
+- nowa szata graficzna
 - szyfrowanie haseł
 - panel użytkownika
 - możliwość zmiany hasła
