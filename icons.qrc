@@ -2,5 +2,7 @@
     <qresource prefix="/icons">
         <file>icons/exit.png</file>
         <file>icons/exit_clicked.png</file>
+        <file>icons/settings.png</file>
+        <file>icons/settings_pushed.png</file>
     </qresource>
 </RCC>

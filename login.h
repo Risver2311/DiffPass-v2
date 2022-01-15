@@ -3,10 +3,8 @@
 
 #include <QDialog>
 #include <QPoint>
+#include <QObject>
 #include <QMouseEvent>
-
-#include "loginform.h"
-
 
 namespace Ui {
 class login;
@@ -32,6 +30,9 @@ private:
     void mouseMoveEvent(QMouseEvent *event);
     int m_nMouseClick_X_Coordinate;
     int m_nMouseClick_Y_Coordinate;
+
+signals:
+    void LoginSuccess(QString);
 };
 
 #endif // LOGIN_H

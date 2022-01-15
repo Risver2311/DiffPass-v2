@@ -45,9 +45,7 @@ border-color:#fff;
     </property>
     <property name="font">
      <font>
-      <family>Segoe-UI</family>
       <pointsize>-1</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -77,7 +75,6 @@ font-weight: bold;</string>
     </property>
     <property name="font">
      <font>
-      <family>Segoe-UI</family>
       <pointsize>-1</pointsize>
      </font>
     </property>
@@ -114,7 +111,6 @@ padding: 0 10px;
     </property>
     <property name="font">
      <font>
-      <family>Segoe-UI</family>
       <pointsize>-1</pointsize>
      </font>
     </property>
@@ -235,7 +231,6 @@ font-size: 20px;
     </property>
     <property name="font">
      <font>
-      <family>Segoe-UI</family>
       <pointsize>-1</pointsize>
      </font>
     </property>
@@ -269,14 +264,16 @@ padding: 0 10px;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">#exit{
+	border-image: url(:/icons/icons/exit.png);
+}
+
+#exit:pressed{
+	border-image: url(:/icons/icons/exit_clicked.png);
+}</string>
     </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="icons.qrc">
-      <normaloff>:/icons/icons/exit.png</normaloff>:/icons/icons/exit.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -284,11 +281,12 @@ padding: 0 10px;
       <height>40</height>
      </size>
     </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="icons.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

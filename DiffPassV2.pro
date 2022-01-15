@@ -13,22 +13,23 @@ QTPLUGIN += qsqlite
 
 SOURCES += \
     dbmanager.cpp \
+    generator.cpp \
     login.cpp \
-    loginform.cpp \
     main.cpp \
     mainwindow.cpp \
-    signup.cpp \
-    signupform.cpp
+    qaesencryption.cpp \
+    signup.cpp
 
 HEADERS += \
     dbmanager.h \
+    generator.h \
     login.h \
-    loginform.h \
     mainwindow.h \
-    signup.h \
-    signupform.h
+    qaesencryption.h \
+    signup.h
 
 FORMS += \
+    generator.ui \
     login.ui \
     mainwindow.ui \
     signup.ui

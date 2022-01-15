@@ -1,6 +1,10 @@
 #include "signup.h"
 #include "ui_signup.h"
+#include "dbmanager.h"
 
+#include <QMessageBox>
+
+class signup;
 
 signup::signup(QWidget *parent) :
     QDialog(parent),
@@ -37,6 +41,38 @@ void signup::on_exit_clicked()
 
 void signup::on_pushButton_clicked()
 {
-    signupForm sf(ui);
+    dbManager db;
+    QString username = ui->lineEdit->text();
+    QString password = ui->lineEdit_2->text();
+    QString password2 = ui->lineEdit_3->text();
+
+    if(username.length() < 6 || password.length() < 6)
+    {
+        QMessageBox::about(this, "error", "Your login or password is too short");
+    }
+
+    else if(password != password2)
+    {
+        QMessageBox::about(this, "error", "Password and confirm password does not match");
+    }
+
+    else if(username.length() >= 6 && password.length() >= 6 && password == password2)
+    {
+        db.Registration(username, password);
+        switch(db.reg)
+        {
+            case 1:
+                QMessageBox::about(this, "Username", "Username Already Exist!");
+                ui->lineEdit->clear();
+                ui->lineEdit_2->clear();
+                ui->lineEdit_3->clear();
+                break;
+            case 2:
+                QMessageBox::about(this, "Registration", "Registration successful");
+                this->close();
+                break;
+        }
+
+    }
 }
 

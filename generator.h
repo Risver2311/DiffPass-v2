@@ -1,35 +1,38 @@
-#ifndef SIGNUP_H
-#define SIGNUP_H
+#ifndef GENERATOR_H
+#define GENERATOR_H
 
-#include <QObject>
 #include <QDialog>
 #include <QPoint>
 #include <QMouseEvent>
 
 namespace Ui {
-class signup;
+class generator;
 }
 
-class signup : public QDialog
+class generator : public QDialog
 {
-     Q_OBJECT
+    Q_OBJECT
 
 public:
-    explicit signup(QWidget *parent = nullptr);
-    ~signup();
+    explicit generator(QWidget *parent = nullptr);
+    ~generator();
 
 private slots:
     void on_exit_clicked();
 
-    void on_pushButton_clicked();
+    void on_genpass_clicked();
+
+    void on_copy_clicked();
 
 private:
-    Ui::signup *ui;
+    Ui::generator *ui;
 
     void mousePressEvent(QMouseEvent *event);
     void mouseMoveEvent(QMouseEvent *event);
     int m_nMouseClick_X_Coordinate;
     int m_nMouseClick_Y_Coordinate;
+
+    QVector<QChar> Generate(int length);
 };
 
-#endif // SIGNUP_H
+#endif // GENERATOR_H
