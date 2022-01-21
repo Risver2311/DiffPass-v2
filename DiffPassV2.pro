@@ -17,7 +17,6 @@ SOURCES += \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
-    qaesencryption.cpp \
     signup.cpp
 
 HEADERS += \
@@ -25,7 +24,6 @@ HEADERS += \
     generator.h \
     login.h \
     mainwindow.h \
-    qaesencryption.h \
     signup.h
 
 FORMS += \
@@ -41,3 +39,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     icons.qrc
+
+LIBS += -LC:/OpenSSL-Win64/lib -llibeay32
+
+INCLUDEPATH += C:/OpenSSL-Win64/include

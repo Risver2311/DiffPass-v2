@@ -172,11 +172,11 @@ font-size: 20px;
     </property>
     <property name="styleSheet">
      <string notr="true">#exit{
-	border-image: url(:/icons/icons/exit.png);
+	image: url(:/icons/icons/exit.png);
 }
 
 #exit:pressed{
-	border-image: url(:/icons/icons/exit_clicked.png);
+	image: url(:/icons/icons/exit_clicked.png);
 }</string>
     </property>
     <property name="text">

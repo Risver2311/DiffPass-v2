@@ -49,7 +49,6 @@ void login::on_pushButton_clicked()
         QMessageBox::about(this, "error", "Your login or password is not correct");
     if(db.log == 1)
     {
-        QMessageBox::about(this, "login", "Login successful");
         emit LoginSuccess(username);
         this->close();
     }

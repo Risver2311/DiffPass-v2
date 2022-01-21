@@ -6,8 +6,11 @@
 
 dbManager::dbManager()
 {
-    m_db = QSqlDatabase::addDatabase("QSQLITE");
-    m_db.setDatabaseName("DiffPass.sqlite");
+    m_db = QSqlDatabase::addDatabase("QMYSQL");
+    m_db.setHostName("localhost");
+    m_db.setUserName("root");
+    m_db.setPassword("");
+    m_db.setDatabaseName("DiffPass");
 
     if(m_db.open())
     {
@@ -16,8 +19,8 @@ dbManager::dbManager()
     else
     {
         qDebug("Nie otwarto");
+        qDebug() << m_db.lastError();
     }
-
 }
 
 void dbManager::Registration(QString usr, QString pass)
@@ -30,8 +33,6 @@ void dbManager::Registration(QString usr, QString pass)
     password = hash->result().toHex();
 
     QSqlQuery qry(m_db);
-
-    qDebug() << qry.lastError();
 
     qry.prepare("SELECT username FROM users WHERE username = :username");
     qry.bindValue(":username", username);
@@ -51,7 +52,7 @@ void dbManager::Registration(QString usr, QString pass)
 
     if(check)
     {
-        qry.prepare("CREATE TABLE "+ username +"(id integer primary key,url CHAR(255), email CHAR(255), password CHAR)");
+        qry.prepare("CREATE TABLE "+ username +"(id INTEGER AUTO_INCREMENT PRIMARY KEY, url CHAR(255), email CHAR(255), password CHAR(255))");
         qry.exec();
 
         qry.prepare("INSERT INTO users (username, password)" "VALUES (:username, :password)");
@@ -80,9 +81,6 @@ void dbManager::Login(QString usr, QString pass)
 
     if(qry.exec())
     {
-        qry.bindValue(":username", username);
-        qry.bindValue(":password", password);
-
         while(qry.next())
             log++;
     }

@@ -92,14 +92,16 @@ background-color:#dadada;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true"/>
+     <string notr="true">#exit{
+	image: url(:/icons/icons/exit.png);
+}
+
+#exit:pressed{
+	image: url(:/icons/icons/exit_clicked.png);
+}</string>
     </property>
     <property name="text">
      <string/>
-    </property>
-    <property name="icon">
-     <iconset resource="icons.qrc">
-      <normaloff>:/icons/icons/exit.png</normaloff>:/icons/icons/exit.png</iconset>
     </property>
     <property name="iconSize">
      <size>
@@ -448,8 +450,6 @@ background-color:#dadada;
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="icons.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

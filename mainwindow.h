@@ -31,12 +31,16 @@ public slots:
 private slots:
     void on_login_clicked();
     void on_signup_clicked();
+
     void on_remove_clicked();
     void on_add_clicked();
-
-    void on_tableView_clicked(const QModelIndex &index);
-
+    void on_tableWidget_clicked(const QModelIndex &index);
+    void on_settings_clicked();
     void on_generator_clicked();
+
+    void on_back_clicked();
+    void on_imageButton_clicked();
+    void on_changePassword_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -48,11 +52,12 @@ private:
     QSqlDatabase m_db;
     QSqlTableModel * table;
 
-    void decodedLine();
-    void encodedLine();
-    void refresh();
+    QByteArray encrypt(QByteArray plainText);
+    QByteArray decrypt(QByteArray encryptedText);
 
-    QByteArray encoding(QByteArray);
-    QString decoding(QByteArray);
+    void refresh();
+    void decodedLine();
+    void changePassword(QByteArray ch_password);
 };
+
 #endif // MAINWINDOW_H

@@ -4,5 +4,8 @@
         <file>icons/exit_clicked.png</file>
         <file>icons/settings.png</file>
         <file>icons/settings_pushed.png</file>
+        <file>icons/back.png</file>
+        <file>icons/back_pushed.png</file>
+        <file>icons/avatar.png</file>
     </qresource>
 </RCC>
